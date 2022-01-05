@@ -83,7 +83,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg6-of-ifk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-31.884057971014496" y="48.883928571428569"/>
+            <point key="canvasLocation" x="1481" y="113"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Opc-ej-fl7">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Clf-PQ-KEt" customClass="DetailViewController" customModule="RickMortyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NdG-28-P9F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-f5-smd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gfy-qn-8uK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YGB-f5-smd" firstAttribute="leading" secondItem="Gfy-qn-8uK" secondAttribute="leading" id="IpR-Bi-ADW"/>
+                            <constraint firstItem="YGB-f5-smd" firstAttribute="bottom" secondItem="Gfy-qn-8uK" secondAttribute="bottom" id="Ldf-ib-2gm"/>
+                            <constraint firstItem="YGB-f5-smd" firstAttribute="trailing" secondItem="Gfy-qn-8uK" secondAttribute="trailing" id="cBP-zr-v5C"/>
+                            <constraint firstItem="YGB-f5-smd" firstAttribute="top" secondItem="Gfy-qn-8uK" secondAttribute="top" id="d9N-q9-JiH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tvDetails" destination="YGB-f5-smd" id="YNr-oT-oln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxl-Jo-snO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214" y="113"/>
         </scene>
     </scenes>
     <resources>

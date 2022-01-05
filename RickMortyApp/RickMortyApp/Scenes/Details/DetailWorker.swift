@@ -1,5 +1,5 @@
 //
-//  ListViewWorker.swift
+//  DetailWorker.swift
 //  RickMortyApp
 //
 //  Created by Nevilkumar Lad on 06/01/22.
@@ -12,9 +12,7 @@
 
 import UIKit
 
-
-class ListWorker {
-
-    // MARK: - Properties
-    typealias Models = ListModels
+class DetailWorker {
+    func doSomeWork() {
+    }
 }

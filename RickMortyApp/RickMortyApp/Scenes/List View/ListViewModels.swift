@@ -72,37 +72,3 @@ enum ListModels {
         }
     }
 }
-
-/*
-
-
-enum ListViewLoaderType {
-    case general
-}
-
-enum ListViewErrorType {
-    case backend
-    case custom(message: String)
-}
-
-enum ListViewModel {
-    // MARK: Use cases
-
-    enum ListViewDetails {
-        struct Request {
-        }
-        struct Response {
-        }
-        struct ViewModel {
-        }
-    }
-
-    enum NextScene {
-        struct Request {
-        }
-        struct Response {
-        }
-        struct ViewModel {
-        }
-    }
-}*/

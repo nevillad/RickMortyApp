@@ -176,35 +176,3 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
     }
 }
 
-
-/*
-
-protocol ListViewBusinessLogic {
-    func doListViewDetails(request: ListViewModel.ListViewDetails.Request)
-    func initialise(showLoader: Bool)
-}
-
-protocol ListViewDataStore {
-    //var name: String { get set }
-}
-
-class ListViewInteractor: ListViewBusinessLogic, ListViewDataStore {
-    var presenter: ListViewPresentationLogic?
-    var worker: ListViewWorker?
-    //var name: String = ""
-
-    // MARK: Do ListViewDetails
-
-    func doListViewDetails(request: ListViewModel.ListViewDetails.Request)
-    {
-        worker = ListViewWorker()
-        worker?.doSomeWork()
-
-        let response = ListViewModel.ListViewDetails.Response()
-        presenter?.presentListViewDetails(response: response)
-    }
-
-    func initialise(showLoader: Bool = true) {
-    }
-}
-*/
