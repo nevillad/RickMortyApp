@@ -24,11 +24,42 @@ class DashboardRouter: NSObject, DashboardRoutingLogic, DashboardDataPassing {
     weak var viewController: DashboardViewController?
     var dataStore: DashboardDataStore?
 
-    // MARK: Navigation
+
     func showNextScene(action: Actions) {
         //Set selection action to the data store
+        self.dataStore?.selectedAction = action
+
+        let nextViewController = ListViewController.instantiateFromStoryboard()
+        var destinationDS = nextViewController.router?.dataStore
+        self.passDataTo(&destinationDS!, from: self.dataStore!)
+
+        viewController?.navigationController?.pushViewController(nextViewController, animated: true)
 
     }
+
+    // MARK: - Passing Data
+     func passDataTo(_ destinationDS: inout ListDataStore, from sourceDS: DashboardDataStore) {
+        var nextScreenType: ListType = .characters
+        var title = ""
+
+        switch sourceDS.selectedAction {
+        case .characters:
+            nextScreenType = .characters
+            title = "Characters"
+        case .episodes:
+            nextScreenType = .episodes
+            title = "Episodes"
+        case .locations:
+            nextScreenType = .locations
+            title = "Locations"
+        default:
+            debugPrint("invalid action performed")
+            return
+        }
+
+        destinationDS.listScreenType = nextScreenType
+        destinationDS.screenTitle = title
+     }
 }
 
 // MARK: Passing data
