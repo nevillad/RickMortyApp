@@ -1,0 +1,53 @@
+//
+//  RickMortyApp.xcconfig
+//  RickMortyApp
+//
+//  Created by Nevilkumar Lad on 05/01/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+/// Base configuration file for the all environment specific configurations file
+#include "RickMortyApp/Configuration/Base.xcconfig"
+
+//MARK: - BaseURL
+URL_APP_BASE = https:/$()/rickandmortyapi.com/api/
+
+// MARK: - Application Configuration
+AD_APP_NAME = RickMortyApp
+AD_DISPLAY = Rick Morty
+
+///NOTE: PRODUCT_BUNDLE_IDENTIFIER is default key use at Plist file to set Bundle ID from Target->General->Bundle_Identifier
+APP_BUNDLE_ID = com.nl.rickmortyapp
+
+///NOTE: PRODUCT_NAME is default key use at Plist file to show Display Name from Target->General->DISPLAY_NAME
+DISPLAY_NAME = $(AD_DISPLAY)
+
+///NOTE: MARKETING_VERSION is default key use at Plist file to set manually in Target->General->Identity->Version
+VERSION = 1.0
+
+///NOTE: CURRENT_PROJECT_VERSION is default key use at Plist file to set manually in Target->General->Identity->Build
+BUILD = 1
+
+// MARK: - PList Privacy Description - Inherit from base
+// MARK: - Font Value - Inherit from base
+
+// MARK: - Theme Color Values
+COLOR_PRIMARY = #E95B1CFF
+COLOR_SECONDARY = #CB4003FF
+COLOR_SEPARATOR = #F2F2F
+
+COLOR_PRIMARY_NAVBAR = $(COLOR_PRIMARY)
+COLOR_SECONDARY_NAVBAR = $(COLOR_PRIMARY)
+COLOR_NAVBAR_TITLE = #FFFFFFFF
+COLOR_NAVBAR_BUTTON_TINT = #FFFFFFFF
+
+COLOR_WHITE = #FFFFFFFF
+COLOR_BLACK = #000000FF
+COLOR_RED = #FF0000FF
+COLOR_LIGHT_TEXT = #A7A6A6FF
+
+COLOR_DARK_BACKGROUND = #DFDFDFFF
+COLOR_LIGHT_BACKGROUND = #F2F2F2FF
+

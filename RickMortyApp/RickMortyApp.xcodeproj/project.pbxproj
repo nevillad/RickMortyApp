@@ -1,0 +1,962 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019CD2BB6891909A6297216B /* Pods_RickMortyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456109257AA377A0C5826780 /* Pods_RickMortyAppTests.framework */; };
+		3D75F3AD27860C770039AD63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3AC27860C770039AD63 /* AppDelegate.swift */; };
+		3D75F3AF27860C770039AD63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3AE27860C770039AD63 /* SceneDelegate.swift */; };
+		3D75F3B127860C770039AD63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3B027860C770039AD63 /* ViewController.swift */; };
+		3D75F3B427860C770039AD63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B227860C770039AD63 /* Main.storyboard */; };
+		3D75F3B627860C780039AD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B527860C780039AD63 /* Assets.xcassets */; };
+		3D75F3B927860C780039AD63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */; };
+		3D75F3C427860C780039AD63 /* RickMortyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3C327860C780039AD63 /* RickMortyAppTests.swift */; };
+		3D75F3CF27860C780039AD63 /* RickMortyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3CE27860C780039AD63 /* RickMortyAppUITests.swift */; };
+		3D75F3DE27860E730039AD63 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3DD27860E730039AD63 /* AppUtility.swift */; };
+		3D75F3E127860EF50039AD63 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3E027860EF50039AD63 /* Environment.swift */; };
+		3D75F3F327860FE30039AD63 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3E727860FE30039AD63 /* Roboto-Black.ttf */; };
+		3D75F3F427860FE30039AD63 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3E827860FE30039AD63 /* Roboto-Light.ttf */; };
+		3D75F3F527860FE30039AD63 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3E927860FE30039AD63 /* Roboto-Italic.ttf */; };
+		3D75F3F627860FE30039AD63 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3EA27860FE30039AD63 /* Roboto-LightItalic.ttf */; };
+		3D75F3F727860FE30039AD63 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3EB27860FE30039AD63 /* Roboto-Medium.ttf */; };
+		3D75F3F827860FE30039AD63 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3EC27860FE30039AD63 /* Roboto-MediumItalic.ttf */; };
+		3D75F3F927860FE30039AD63 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3ED27860FE30039AD63 /* Roboto-Thin.ttf */; };
+		3D75F3FA27860FE30039AD63 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3EE27860FE30039AD63 /* Roboto-BlackItalic.ttf */; };
+		3D75F3FB27860FE30039AD63 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3EF27860FE30039AD63 /* Roboto-Regular.ttf */; };
+		3D75F3FC27860FE30039AD63 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3F027860FE30039AD63 /* Roboto-Bold.ttf */; };
+		3D75F3FD27860FE30039AD63 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3F127860FE30039AD63 /* Roboto-BoldItalic.ttf */; };
+		3D75F3FE27860FE30039AD63 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3F227860FE30039AD63 /* Roboto-ThinItalic.ttf */; };
+		3D75F40A278614510039AD63 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F404278614510039AD63 /* DashboardPresenter.swift */; };
+		3D75F40B278614510039AD63 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F405278614510039AD63 /* DashboardWorker.swift */; };
+		3D75F40C278614510039AD63 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F406278614510039AD63 /* DashboardRouter.swift */; };
+		3D75F40D278614510039AD63 /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F407278614510039AD63 /* DashboardModels.swift */; };
+		3D75F40E278614510039AD63 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F408278614510039AD63 /* DashboardViewController.swift */; };
+		3D75F40F278614510039AD63 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F409278614510039AD63 /* DashboardInteractor.swift */; };
+		3D75F4112786148B0039AD63 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F4102786148B0039AD63 /* BaseViewController.swift */; };
+		3D75F414278614D60039AD63 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F413278614D60039AD63 /* UIViewControllerExtension.swift */; };
+		3D75F416278614FE0039AD63 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F415278614FE0039AD63 /* ColorUtility.swift */; };
+		3D75F418278615160039AD63 /* FontUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F417278615160039AD63 /* FontUtility.swift */; };
+		3D75F41A2786154C0039AD63 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F4192786154C0039AD63 /* AppConstants.swift */; };
+		3D75F41C278615880039AD63 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F41B278615880039AD63 /* UIImageViewExtension.swift */; };
+		3D75F41E278616220039AD63 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F41D278616220039AD63 /* StringExtension.swift */; };
+		3D75F426278617620039AD63 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F424278617620039AD63 /* DashboardTableViewCell.swift */; };
+		3D75F427278617620039AD63 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F425278617620039AD63 /* DashboardTableViewCell.xib */; };
+		3D75F42A278619730039AD63 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F429278619730039AD63 /* CustomLabel.swift */; };
+		E0F49DAA4E5EAD4F3F093B8D /* Pods_RickMortyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBFF4ADC635A56DAC316F58 /* Pods_RickMortyApp.framework */; };
+		F473E09B9B944775C7757273 /* Pods_RickMortyApp_RickMortyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67256027872CC232A8B3CD71 /* Pods_RickMortyApp_RickMortyAppUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D75F3C027860C780039AD63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D75F3A127860C770039AD63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D75F3A827860C770039AD63;
+			remoteInfo = RickMortyApp;
+		};
+		3D75F3CB27860C780039AD63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D75F3A127860C770039AD63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D75F3A827860C770039AD63;
+			remoteInfo = RickMortyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27502A974066E0DB263FE943 /* Pods-RickMortyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyApp.debug.xcconfig"; path = "Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3D75F3A927860C770039AD63 /* RickMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D75F3AC27860C770039AD63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D75F3AE27860C770039AD63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3D75F3B027860C770039AD63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D75F3B327860C770039AD63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D75F3B527860C780039AD63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D75F3B827860C780039AD63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D75F3BA27860C780039AD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D75F3BF27860C780039AD63 /* RickMortyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickMortyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D75F3C327860C780039AD63 /* RickMortyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppTests.swift; sourceTree = "<group>"; };
+		3D75F3C527860C780039AD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D75F3CA27860C780039AD63 /* RickMortyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickMortyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D75F3CE27860C780039AD63 /* RickMortyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppUITests.swift; sourceTree = "<group>"; };
+		3D75F3D027860C780039AD63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D75F3DD27860E730039AD63 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		3D75F3E027860EF50039AD63 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		3D75F3E327860F570039AD63 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		3D75F3E727860FE30039AD63 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		3D75F3E827860FE30039AD63 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		3D75F3E927860FE30039AD63 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		3D75F3EA27860FE30039AD63 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		3D75F3EB27860FE30039AD63 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		3D75F3EC27860FE30039AD63 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		3D75F3ED27860FE30039AD63 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		3D75F3EE27860FE30039AD63 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3D75F3EF27860FE30039AD63 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3D75F3F027860FE30039AD63 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		3D75F3F127860FE30039AD63 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3D75F3F227860FE30039AD63 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		3D75F3FF2786101F0039AD63 /* RickMortyApp.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RickMortyApp.xcconfig; sourceTree = "<group>"; };
+		3D75F400278610EF0039AD63 /* RickMortyApp-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "RickMortyApp-Debug.xcconfig"; sourceTree = "<group>"; };
+		3D75F401278611390039AD63 /* RickMortyApp-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "RickMortyApp-Release.xcconfig"; sourceTree = "<group>"; };
+		3D75F404278614510039AD63 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		3D75F405278614510039AD63 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
+		3D75F406278614510039AD63 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		3D75F407278614510039AD63 /* DashboardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModels.swift; sourceTree = "<group>"; };
+		3D75F408278614510039AD63 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3D75F409278614510039AD63 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		3D75F4102786148B0039AD63 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3D75F413278614D60039AD63 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		3D75F415278614FE0039AD63 /* ColorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
+		3D75F417278615160039AD63 /* FontUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtility.swift; sourceTree = "<group>"; };
+		3D75F4192786154C0039AD63 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		3D75F41B278615880039AD63 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3D75F41D278616220039AD63 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		3D75F424278617620039AD63 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		3D75F425278617620039AD63 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		3D75F429278619730039AD63 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		456109257AA377A0C5826780 /* Pods_RickMortyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMortyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67256027872CC232A8B3CD71 /* Pods_RickMortyApp_RickMortyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMortyApp_RickMortyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		704F18FFB69927B1521CD3A9 /* Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		98892537D733A15D016DB128 /* Pods-RickMortyApp-RickMortyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyApp-RickMortyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AFE7E2E003AA9B27CD9E9BAD /* Pods-RickMortyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyAppTests.release.xcconfig"; path = "Target Support Files/Pods-RickMortyAppTests/Pods-RickMortyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		B84AF311E800083373E9D660 /* Pods-RickMortyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RickMortyAppTests/Pods-RickMortyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDBFF4ADC635A56DAC316F58 /* Pods_RickMortyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMortyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F817229EAA69B1C112FA24A2 /* Pods-RickMortyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyApp.release.xcconfig"; path = "Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D75F3A627860C770039AD63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F49DAA4E5EAD4F3F093B8D /* Pods_RickMortyApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3BC27860C780039AD63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CD2BB6891909A6297216B /* Pods_RickMortyAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3C727860C780039AD63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F473E09B9B944775C7757273 /* Pods_RickMortyApp_RickMortyAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D75F3A027860C770039AD63 = {
+			isa = PBXGroup;
+			children = (
+				3D75F3AB27860C770039AD63 /* RickMortyApp */,
+				3D75F3C227860C780039AD63 /* RickMortyAppTests */,
+				3D75F3CD27860C780039AD63 /* RickMortyAppUITests */,
+				3D75F3AA27860C770039AD63 /* Products */,
+				5318601DE3F249836916048E /* Pods */,
+				83B2EDCB9D8FC640B55F4F73 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D75F3AA27860C770039AD63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3A927860C770039AD63 /* RickMortyApp.app */,
+				3D75F3BF27860C780039AD63 /* RickMortyAppTests.xctest */,
+				3D75F3CA27860C780039AD63 /* RickMortyAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D75F3AB27860C770039AD63 /* RickMortyApp */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F402278614110039AD63 /* Scenes */,
+				3D75F3E427860FAE0039AD63 /* Asssets */,
+				3D75F3E227860F220039AD63 /* Configuration */,
+				3D75F3DF27860EC70039AD63 /* Constants */,
+				3D75F3DC27860E5D0039AD63 /* Utilities */,
+				3D75F3AC27860C770039AD63 /* AppDelegate.swift */,
+				3D75F3AE27860C770039AD63 /* SceneDelegate.swift */,
+				3D75F3B027860C770039AD63 /* ViewController.swift */,
+				3D75F3B227860C770039AD63 /* Main.storyboard */,
+				3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */,
+			);
+			path = RickMortyApp;
+			sourceTree = "<group>";
+		};
+		3D75F3C227860C780039AD63 /* RickMortyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3C327860C780039AD63 /* RickMortyAppTests.swift */,
+				3D75F3C527860C780039AD63 /* Info.plist */,
+			);
+			path = RickMortyAppTests;
+			sourceTree = "<group>";
+		};
+		3D75F3CD27860C780039AD63 /* RickMortyAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3CE27860C780039AD63 /* RickMortyAppUITests.swift */,
+				3D75F3D027860C780039AD63 /* Info.plist */,
+			);
+			path = RickMortyAppUITests;
+			sourceTree = "<group>";
+		};
+		3D75F3DC27860E5D0039AD63 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F428278619610039AD63 /* Custom Views */,
+				3D75F415278614FE0039AD63 /* ColorUtility.swift */,
+				3D75F417278615160039AD63 /* FontUtility.swift */,
+				3D75F412278614B90039AD63 /* Extensions */,
+				3D75F3DD27860E730039AD63 /* AppUtility.swift */,
+				3D75F41D278616220039AD63 /* StringExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3D75F3DF27860EC70039AD63 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3E027860EF50039AD63 /* Environment.swift */,
+				3D75F4192786154C0039AD63 /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3D75F3E227860F220039AD63 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3BA27860C780039AD63 /* Info.plist */,
+				3D75F3E327860F570039AD63 /* Base.xcconfig */,
+				3D75F3FF2786101F0039AD63 /* RickMortyApp.xcconfig */,
+				3D75F400278610EF0039AD63 /* RickMortyApp-Debug.xcconfig */,
+				3D75F401278611390039AD63 /* RickMortyApp-Release.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		3D75F3E427860FAE0039AD63 /* Asssets */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3E527860FBD0039AD63 /* Fonts */,
+				3D75F3B527860C780039AD63 /* Assets.xcassets */,
+			);
+			path = Asssets;
+			sourceTree = "<group>";
+		};
+		3D75F3E527860FBD0039AD63 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3E627860FC70039AD63 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3D75F3E627860FC70039AD63 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3E727860FE30039AD63 /* Roboto-Black.ttf */,
+				3D75F3EE27860FE30039AD63 /* Roboto-BlackItalic.ttf */,
+				3D75F3F027860FE30039AD63 /* Roboto-Bold.ttf */,
+				3D75F3F127860FE30039AD63 /* Roboto-BoldItalic.ttf */,
+				3D75F3E927860FE30039AD63 /* Roboto-Italic.ttf */,
+				3D75F3E827860FE30039AD63 /* Roboto-Light.ttf */,
+				3D75F3EA27860FE30039AD63 /* Roboto-LightItalic.ttf */,
+				3D75F3EB27860FE30039AD63 /* Roboto-Medium.ttf */,
+				3D75F3EC27860FE30039AD63 /* Roboto-MediumItalic.ttf */,
+				3D75F3EF27860FE30039AD63 /* Roboto-Regular.ttf */,
+				3D75F3ED27860FE30039AD63 /* Roboto-Thin.ttf */,
+				3D75F3F227860FE30039AD63 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		3D75F402278614110039AD63 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F4032786143F0039AD63 /* Dashboard */,
+				3D75F4102786148B0039AD63 /* BaseViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3D75F4032786143F0039AD63 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F41F278617070039AD63 /* TableView Cell */,
+				3D75F404278614510039AD63 /* DashboardPresenter.swift */,
+				3D75F405278614510039AD63 /* DashboardWorker.swift */,
+				3D75F406278614510039AD63 /* DashboardRouter.swift */,
+				3D75F407278614510039AD63 /* DashboardModels.swift */,
+				3D75F408278614510039AD63 /* DashboardViewController.swift */,
+				3D75F409278614510039AD63 /* DashboardInteractor.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		3D75F412278614B90039AD63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F413278614D60039AD63 /* UIViewControllerExtension.swift */,
+				3D75F41B278615880039AD63 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D75F41F278617070039AD63 /* TableView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F424278617620039AD63 /* DashboardTableViewCell.swift */,
+				3D75F425278617620039AD63 /* DashboardTableViewCell.xib */,
+			);
+			path = "TableView Cell";
+			sourceTree = "<group>";
+		};
+		3D75F428278619610039AD63 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F429278619730039AD63 /* CustomLabel.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		5318601DE3F249836916048E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27502A974066E0DB263FE943 /* Pods-RickMortyApp.debug.xcconfig */,
+				F817229EAA69B1C112FA24A2 /* Pods-RickMortyApp.release.xcconfig */,
+				704F18FFB69927B1521CD3A9 /* Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig */,
+				98892537D733A15D016DB128 /* Pods-RickMortyApp-RickMortyAppUITests.release.xcconfig */,
+				B84AF311E800083373E9D660 /* Pods-RickMortyAppTests.debug.xcconfig */,
+				AFE7E2E003AA9B27CD9E9BAD /* Pods-RickMortyAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83B2EDCB9D8FC640B55F4F73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDBFF4ADC635A56DAC316F58 /* Pods_RickMortyApp.framework */,
+				67256027872CC232A8B3CD71 /* Pods_RickMortyApp_RickMortyAppUITests.framework */,
+				456109257AA377A0C5826780 /* Pods_RickMortyAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D75F3A827860C770039AD63 /* RickMortyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D75F3D327860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyApp" */;
+			buildPhases = (
+				9FF8B6C38E07C172B410EBAF /* [CP] Check Pods Manifest.lock */,
+				3D75F3A527860C770039AD63 /* Sources */,
+				3D75F3A627860C770039AD63 /* Frameworks */,
+				3D75F3A727860C770039AD63 /* Resources */,
+				D3A9C39F5DF4CF5D876631A2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RickMortyApp;
+			productName = RickMortyApp;
+			productReference = 3D75F3A927860C770039AD63 /* RickMortyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D75F3BE27860C780039AD63 /* RickMortyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D75F3D627860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyAppTests" */;
+			buildPhases = (
+				BE83A0A2AB0B55D96504540F /* [CP] Check Pods Manifest.lock */,
+				3D75F3BB27860C780039AD63 /* Sources */,
+				3D75F3BC27860C780039AD63 /* Frameworks */,
+				3D75F3BD27860C780039AD63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D75F3C127860C780039AD63 /* PBXTargetDependency */,
+			);
+			name = RickMortyAppTests;
+			productName = RickMortyAppTests;
+			productReference = 3D75F3BF27860C780039AD63 /* RickMortyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D75F3C927860C780039AD63 /* RickMortyAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D75F3D927860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyAppUITests" */;
+			buildPhases = (
+				245341D27082319081123C7C /* [CP] Check Pods Manifest.lock */,
+				3D75F3C627860C780039AD63 /* Sources */,
+				3D75F3C727860C780039AD63 /* Frameworks */,
+				3D75F3C827860C780039AD63 /* Resources */,
+				9BB810F3B468534439B319BC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D75F3CC27860C780039AD63 /* PBXTargetDependency */,
+			);
+			name = RickMortyAppUITests;
+			productName = RickMortyAppUITests;
+			productReference = 3D75F3CA27860C780039AD63 /* RickMortyAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D75F3A127860C770039AD63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					3D75F3A827860C770039AD63 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3D75F3BE27860C780039AD63 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3D75F3A827860C770039AD63;
+					};
+					3D75F3C927860C780039AD63 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 3D75F3A827860C770039AD63;
+					};
+				};
+			};
+			buildConfigurationList = 3D75F3A427860C770039AD63 /* Build configuration list for PBXProject "RickMortyApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D75F3A027860C770039AD63;
+			productRefGroup = 3D75F3AA27860C770039AD63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D75F3A827860C770039AD63 /* RickMortyApp */,
+				3D75F3BE27860C780039AD63 /* RickMortyAppTests */,
+				3D75F3C927860C780039AD63 /* RickMortyAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D75F3A727860C770039AD63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D75F3FE27860FE30039AD63 /* Roboto-ThinItalic.ttf in Resources */,
+				3D75F3F727860FE30039AD63 /* Roboto-Medium.ttf in Resources */,
+				3D75F3FC27860FE30039AD63 /* Roboto-Bold.ttf in Resources */,
+				3D75F3B927860C780039AD63 /* LaunchScreen.storyboard in Resources */,
+				3D75F3F527860FE30039AD63 /* Roboto-Italic.ttf in Resources */,
+				3D75F3F627860FE30039AD63 /* Roboto-LightItalic.ttf in Resources */,
+				3D75F427278617620039AD63 /* DashboardTableViewCell.xib in Resources */,
+				3D75F3B627860C780039AD63 /* Assets.xcassets in Resources */,
+				3D75F3F427860FE30039AD63 /* Roboto-Light.ttf in Resources */,
+				3D75F3FB27860FE30039AD63 /* Roboto-Regular.ttf in Resources */,
+				3D75F3FA27860FE30039AD63 /* Roboto-BlackItalic.ttf in Resources */,
+				3D75F3B427860C770039AD63 /* Main.storyboard in Resources */,
+				3D75F3F827860FE30039AD63 /* Roboto-MediumItalic.ttf in Resources */,
+				3D75F3F927860FE30039AD63 /* Roboto-Thin.ttf in Resources */,
+				3D75F3FD27860FE30039AD63 /* Roboto-BoldItalic.ttf in Resources */,
+				3D75F3F327860FE30039AD63 /* Roboto-Black.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3BD27860C780039AD63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3C827860C780039AD63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		245341D27082319081123C7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RickMortyApp-RickMortyAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BB810F3B468534439B319BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF8B6C38E07C172B410EBAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RickMortyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE83A0A2AB0B55D96504540F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RickMortyAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A9C39F5DF4CF5D876631A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D75F3A527860C770039AD63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D75F3DE27860E730039AD63 /* AppUtility.swift in Sources */,
+				3D75F40C278614510039AD63 /* DashboardRouter.swift in Sources */,
+				3D75F41C278615880039AD63 /* UIImageViewExtension.swift in Sources */,
+				3D75F3B127860C770039AD63 /* ViewController.swift in Sources */,
+				3D75F40B278614510039AD63 /* DashboardWorker.swift in Sources */,
+				3D75F418278615160039AD63 /* FontUtility.swift in Sources */,
+				3D75F3AD27860C770039AD63 /* AppDelegate.swift in Sources */,
+				3D75F4112786148B0039AD63 /* BaseViewController.swift in Sources */,
+				3D75F40D278614510039AD63 /* DashboardModels.swift in Sources */,
+				3D75F426278617620039AD63 /* DashboardTableViewCell.swift in Sources */,
+				3D75F3AF27860C770039AD63 /* SceneDelegate.swift in Sources */,
+				3D75F42A278619730039AD63 /* CustomLabel.swift in Sources */,
+				3D75F40F278614510039AD63 /* DashboardInteractor.swift in Sources */,
+				3D75F414278614D60039AD63 /* UIViewControllerExtension.swift in Sources */,
+				3D75F41A2786154C0039AD63 /* AppConstants.swift in Sources */,
+				3D75F40E278614510039AD63 /* DashboardViewController.swift in Sources */,
+				3D75F41E278616220039AD63 /* StringExtension.swift in Sources */,
+				3D75F3E127860EF50039AD63 /* Environment.swift in Sources */,
+				3D75F416278614FE0039AD63 /* ColorUtility.swift in Sources */,
+				3D75F40A278614510039AD63 /* DashboardPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3BB27860C780039AD63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D75F3C427860C780039AD63 /* RickMortyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D75F3C627860C780039AD63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D75F3CF27860C780039AD63 /* RickMortyAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D75F3C127860C780039AD63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D75F3A827860C770039AD63 /* RickMortyApp */;
+			targetProxy = 3D75F3C027860C780039AD63 /* PBXContainerItemProxy */;
+		};
+		3D75F3CC27860C780039AD63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D75F3A827860C770039AD63 /* RickMortyApp */;
+			targetProxy = 3D75F3CB27860C780039AD63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D75F3B227860C770039AD63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D75F3B327860C770039AD63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D75F3B827860C780039AD63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D75F3D127860C780039AD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D75F3D227860C780039AD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D75F3D427860C780039AD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D75F400278610EF0039AD63 /* RickMortyApp-Debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyApp/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D75F3D527860C780039AD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D75F401278611390039AD63 /* RickMortyApp-Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyApp/Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3D75F3D727860C780039AD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84AF311E800083373E9D660 /* Pods-RickMortyAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickMortyApp.app/RickMortyApp";
+			};
+			name = Debug;
+		};
+		3D75F3D827860C780039AD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE7E2E003AA9B27CD9E9BAD /* Pods-RickMortyAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickMortyApp.app/RickMortyApp";
+			};
+			name = Release;
+		};
+		3D75F3DA27860C780039AD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 704F18FFB69927B1521CD3A9 /* Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RickMortyApp;
+			};
+			name = Debug;
+		};
+		3D75F3DB27860C780039AD63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98892537D733A15D016DB128 /* Pods-RickMortyApp-RickMortyAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RickMortyAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nl.rickmortyapp.RickMortyAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RickMortyApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D75F3A427860C770039AD63 /* Build configuration list for PBXProject "RickMortyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D75F3D127860C780039AD63 /* Debug */,
+				3D75F3D227860C780039AD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D75F3D327860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D75F3D427860C780039AD63 /* Debug */,
+				3D75F3D527860C780039AD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D75F3D627860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D75F3D727860C780039AD63 /* Debug */,
+				3D75F3D827860C780039AD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D75F3D927860C780039AD63 /* Build configuration list for PBXNativeTarget "RickMortyAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D75F3DA27860C780039AD63 /* Debug */,
+				3D75F3DB27860C780039AD63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D75F3A127860C770039AD63 /* Project object */;
+}

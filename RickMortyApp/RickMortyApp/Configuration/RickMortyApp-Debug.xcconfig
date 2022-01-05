@@ -1,0 +1,18 @@
+//
+//  RickMortyApp-Debug.xcconfig
+//  RickMortyApp
+//
+//  Created by Nevilkumar Lad on 05/01/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+/// Base configuration file for the all environment specific configurations file
+#include "RickMortyApp/Configuration/RickMortyApp.xcconfig"
+#include "Pods/Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp.debug.xcconfig"
+
+IS_DEBUG_MODE = true
+
+//MARK: - BaseURL
+URL_APP_BASE = https:/$()/rickandmortyapi.com/api/

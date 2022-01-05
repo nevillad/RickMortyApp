@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+# Available pods
+def available_pods
+    pod 'Alamofire'
+    pod 'MBProgressHUD'
+    pod 'ReachabilitySwift'
+    pod 'FLEX', :configurations => ['Debug']
+end
+
+target 'RickMortyApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  available_pods
+
+  # Pods for RickMortyApp
+
+  target 'RickMortyAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RickMortyAppUITests' do
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,29 @@
+//
+//  Base.xcconfig
+//  RickMortyApp
+//
+//  Created by Nevilkumar Lad on 05/01/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+INFOPLIST_FILE_PATH = RickMortyApp/Configuration/Info.plist
+
+// MARK: - Environment
+IS_DEBUG_MODE = false
+
+// MARK: - Default Font Value
+FONT_BLACK = Roboto-Black
+FONT_BLACK_ITALIC = Roboto-BlackItalic
+FONT_BOLD = Roboto-Bold
+FONT_BOLD_ITALIC = Roboto-BoldItalic
+FONT_LIGHT = Roboto-Light
+FONT_LIGHT_ITALIC = Roboto-LightItalic
+FONT_MEDIUM = Roboto-Bold
+FONT_MEDIUMITALIC = Roboto-MediumItalic
+FONT_BOOK = Roboto-Light
+FONT_BOOK_ITALIC = Roboto-Italic
+FONT_EXTRA_LIGHT = Roboto-Thin
+FONT_THIN = Roboto-Thin
+FONT_THIN_ITALIC = Roboto-ThinItalic

@@ -1,0 +1,14 @@
+//
+//  RickMortyApp-Release.xcconfig
+//  RickMortyApp
+//
+//  Created by Nevilkumar Lad on 05/01/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+/// Base configuration file for the all environment specific configurations file
+#include "DemoApp/Configuration/RickMortyApp.xcconfig"
+#include "Pods/Target Support Files/Pods-RickMortyApp/Pods-RickMortyApp.release.xcconfig"
+
