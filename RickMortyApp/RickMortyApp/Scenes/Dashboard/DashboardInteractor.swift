@@ -33,9 +33,9 @@ class DashboardInteractor: DashboardBusinessLogic, DashboardDataStore {
     var selectedAction: Actions?
 
     let actionItems = [
-        ["title": CHARACTERS, "icon": CHARACTERS.lowercased()],
-        ["title": EPISODES, "icon": EPISODES.lowercased()],
-        ["title": LOCATIONS, "icon": LOCATIONS.lowercased()]
+        ["title": CHARACTERS, "icon": "person.crop.square.fill.and.at.rectangle"],
+        ["title": EPISODES, "icon": "tv"],
+        ["title": LOCATIONS, "icon": "map"]
     ]
 
     // MARK: - Use Case - Fetch From Local DataStore

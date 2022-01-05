@@ -158,7 +158,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let data = displayedActions[indexPath.row]
         cell.lblTitle.text = data.title
-        cell.ivIcon.image = UIImage(named: data.icon)
+        cell.ivIcon.image = UIImage(systemName: data.icon)
         cell.lblSubtitle.isHidden = true
         return cell
     }
