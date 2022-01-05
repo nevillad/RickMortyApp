@@ -10,7 +10,6 @@
 		019CD2BB6891909A6297216B /* Pods_RickMortyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456109257AA377A0C5826780 /* Pods_RickMortyAppTests.framework */; };
 		3D75F3AD27860C770039AD63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3AC27860C770039AD63 /* AppDelegate.swift */; };
 		3D75F3AF27860C770039AD63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3AE27860C770039AD63 /* SceneDelegate.swift */; };
-		3D75F3B127860C770039AD63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F3B027860C770039AD63 /* ViewController.swift */; };
 		3D75F3B427860C770039AD63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B227860C770039AD63 /* Main.storyboard */; };
 		3D75F3B627860C780039AD63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B527860C780039AD63 /* Assets.xcassets */; };
 		3D75F3B927860C780039AD63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */; };
@@ -46,6 +45,23 @@
 		3D75F426278617620039AD63 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F424278617620039AD63 /* DashboardTableViewCell.swift */; };
 		3D75F427278617620039AD63 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F425278617620039AD63 /* DashboardTableViewCell.xib */; };
 		3D75F42A278619730039AD63 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F429278619730039AD63 /* CustomLabel.swift */; };
+		3D75F43227861D4E0039AD63 /* ListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F42C27861D4E0039AD63 /* ListViewPresenter.swift */; };
+		3D75F43327861D4E0039AD63 /* ListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F42D27861D4E0039AD63 /* ListViewWorker.swift */; };
+		3D75F43427861D4E0039AD63 /* ListViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F42E27861D4E0039AD63 /* ListViewRouter.swift */; };
+		3D75F43527861D4E0039AD63 /* ListViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F42F27861D4E0039AD63 /* ListViewModels.swift */; };
+		3D75F43627861D4E0039AD63 /* ListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F43027861D4E0039AD63 /* ListViewViewController.swift */; };
+		3D75F43727861D4E0039AD63 /* ListViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F43127861D4E0039AD63 /* ListViewInteractor.swift */; };
+		3D75F43A27861EE30039AD63 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F43927861EE30039AD63 /* Episode.swift */; };
+		3D75F43C27861F020039AD63 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F43B27861F020039AD63 /* Character.swift */; };
+		3D75F43E27861F720039AD63 /* ApiUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F43D27861F720039AD63 /* ApiUtility.swift */; };
+		3D75F44427861FD90039AD63 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F44327861FD90039AD63 /* NetworkServices.swift */; };
+		3D75F446278620290039AD63 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F445278620290039AD63 /* ApiRequest.swift */; };
+		3D75F448278620620039AD63 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F447278620620039AD63 /* ApiResponse.swift */; };
+		3D75F44C278622EC0039AD63 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F44A278622EC0039AD63 /* CustomTableViewCell.swift */; };
+		3D75F44D278622EC0039AD63 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F44B278622EC0039AD63 /* CustomTableViewCell.xib */; };
+		3D75F451278623280039AD63 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D75F44F278623280039AD63 /* LoadingTableViewCell.swift */; };
+		3D75F452278623280039AD63 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D75F450278623280039AD63 /* LoadingTableViewCell.xib */; };
+		3D87A297278626B300B3DC25 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D87A296278626B300B3DC25 /* Location.swift */; };
 		E0F49DAA4E5EAD4F3F093B8D /* Pods_RickMortyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBFF4ADC635A56DAC316F58 /* Pods_RickMortyApp.framework */; };
 		F473E09B9B944775C7757273 /* Pods_RickMortyApp_RickMortyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67256027872CC232A8B3CD71 /* Pods_RickMortyApp_RickMortyAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -72,7 +88,6 @@
 		3D75F3A927860C770039AD63 /* RickMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D75F3AC27860C770039AD63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D75F3AE27860C770039AD63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D75F3B027860C770039AD63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D75F3B327860C770039AD63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D75F3B527860C780039AD63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D75F3B827860C780039AD63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,6 +132,23 @@
 		3D75F424278617620039AD63 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		3D75F425278617620039AD63 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
 		3D75F429278619730039AD63 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		3D75F42C27861D4E0039AD63 /* ListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewPresenter.swift; sourceTree = "<group>"; };
+		3D75F42D27861D4E0039AD63 /* ListViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewWorker.swift; sourceTree = "<group>"; };
+		3D75F42E27861D4E0039AD63 /* ListViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRouter.swift; sourceTree = "<group>"; };
+		3D75F42F27861D4E0039AD63 /* ListViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModels.swift; sourceTree = "<group>"; };
+		3D75F43027861D4E0039AD63 /* ListViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewViewController.swift; sourceTree = "<group>"; };
+		3D75F43127861D4E0039AD63 /* ListViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewInteractor.swift; sourceTree = "<group>"; };
+		3D75F43927861EE30039AD63 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		3D75F43B27861F020039AD63 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		3D75F43D27861F720039AD63 /* ApiUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUtility.swift; sourceTree = "<group>"; };
+		3D75F44327861FD90039AD63 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		3D75F445278620290039AD63 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		3D75F447278620620039AD63 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		3D75F44A278622EC0039AD63 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3D75F44B278622EC0039AD63 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		3D75F44F278623280039AD63 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		3D75F450278623280039AD63 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		3D87A296278626B300B3DC25 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		456109257AA377A0C5826780 /* Pods_RickMortyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMortyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67256027872CC232A8B3CD71 /* Pods_RickMortyApp_RickMortyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMortyApp_RickMortyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		704F18FFB69927B1521CD3A9 /* Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-RickMortyApp-RickMortyAppUITests/Pods-RickMortyApp-RickMortyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +212,9 @@
 		3D75F3AB27860C770039AD63 /* RickMortyApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D87A2982786272A00B3DC25 /* Storyboards */,
+				3D75F43F27861FB50039AD63 /* Services */,
+				3D75F43827861ED60039AD63 /* Models */,
 				3D75F402278614110039AD63 /* Scenes */,
 				3D75F3E427860FAE0039AD63 /* Asssets */,
 				3D75F3E227860F220039AD63 /* Configuration */,
@@ -187,9 +222,6 @@
 				3D75F3DC27860E5D0039AD63 /* Utilities */,
 				3D75F3AC27860C770039AD63 /* AppDelegate.swift */,
 				3D75F3AE27860C770039AD63 /* SceneDelegate.swift */,
-				3D75F3B027860C770039AD63 /* ViewController.swift */,
-				3D75F3B227860C770039AD63 /* Main.storyboard */,
-				3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */,
 			);
 			path = RickMortyApp;
 			sourceTree = "<group>";
@@ -221,6 +253,7 @@
 				3D75F412278614B90039AD63 /* Extensions */,
 				3D75F3DD27860E730039AD63 /* AppUtility.swift */,
 				3D75F41D278616220039AD63 /* StringExtension.swift */,
+				3D75F43D27861F720039AD63 /* ApiUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -285,6 +318,7 @@
 		3D75F402278614110039AD63 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3D75F42B27861D2F0039AD63 /* List View */,
 				3D75F4032786143F0039AD63 /* Dashboard */,
 				3D75F4102786148B0039AD63 /* BaseViewController.swift */,
 			);
@@ -326,9 +360,95 @@
 		3D75F428278619610039AD63 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D75F44E278623190039AD63 /* Loading Cell */,
+				3D75F449278622DB0039AD63 /* Custom Cell */,
 				3D75F429278619730039AD63 /* CustomLabel.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		3D75F42B27861D2F0039AD63 /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F42C27861D4E0039AD63 /* ListViewPresenter.swift */,
+				3D75F42D27861D4E0039AD63 /* ListViewWorker.swift */,
+				3D75F42E27861D4E0039AD63 /* ListViewRouter.swift */,
+				3D75F42F27861D4E0039AD63 /* ListViewModels.swift */,
+				3D75F43027861D4E0039AD63 /* ListViewViewController.swift */,
+				3D75F43127861D4E0039AD63 /* ListViewInteractor.swift */,
+			);
+			path = "List View";
+			sourceTree = "<group>";
+		};
+		3D75F43827861ED60039AD63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F43927861EE30039AD63 /* Episode.swift */,
+				3D75F43B27861F020039AD63 /* Character.swift */,
+				3D87A296278626B300B3DC25 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D75F43F27861FB50039AD63 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F44227861FCA0039AD63 /* Network Manager */,
+				3D75F44127861FC30039AD63 /* Request  */,
+				3D75F44027861FBC0039AD63 /* Response */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3D75F44027861FBC0039AD63 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F447278620620039AD63 /* ApiResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		3D75F44127861FC30039AD63 /* Request  */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F445278620290039AD63 /* ApiRequest.swift */,
+			);
+			path = "Request ";
+			sourceTree = "<group>";
+		};
+		3D75F44227861FCA0039AD63 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F44327861FD90039AD63 /* NetworkServices.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		3D75F449278622DB0039AD63 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F44A278622EC0039AD63 /* CustomTableViewCell.swift */,
+				3D75F44B278622EC0039AD63 /* CustomTableViewCell.xib */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		3D75F44E278623190039AD63 /* Loading Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F44F278623280039AD63 /* LoadingTableViewCell.swift */,
+				3D75F450278623280039AD63 /* LoadingTableViewCell.xib */,
+			);
+			path = "Loading Cell";
+			sourceTree = "<group>";
+		};
+		3D87A2982786272A00B3DC25 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3D75F3B227860C770039AD63 /* Main.storyboard */,
+				3D75F3B727860C780039AD63 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		5318601DE3F249836916048E /* Pods */ = {
@@ -474,9 +594,11 @@
 				3D75F3FB27860FE30039AD63 /* Roboto-Regular.ttf in Resources */,
 				3D75F3FA27860FE30039AD63 /* Roboto-BlackItalic.ttf in Resources */,
 				3D75F3B427860C770039AD63 /* Main.storyboard in Resources */,
+				3D75F452278623280039AD63 /* LoadingTableViewCell.xib in Resources */,
 				3D75F3F827860FE30039AD63 /* Roboto-MediumItalic.ttf in Resources */,
 				3D75F3F927860FE30039AD63 /* Roboto-Thin.ttf in Resources */,
 				3D75F3FD27860FE30039AD63 /* Roboto-BoldItalic.ttf in Resources */,
+				3D75F44D278622EC0039AD63 /* CustomTableViewCell.xib in Resources */,
 				3D75F3F327860FE30039AD63 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,22 +727,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D75F44427861FD90039AD63 /* NetworkServices.swift in Sources */,
 				3D75F3DE27860E730039AD63 /* AppUtility.swift in Sources */,
+				3D75F43E27861F720039AD63 /* ApiUtility.swift in Sources */,
 				3D75F40C278614510039AD63 /* DashboardRouter.swift in Sources */,
+				3D75F43527861D4E0039AD63 /* ListViewModels.swift in Sources */,
 				3D75F41C278615880039AD63 /* UIImageViewExtension.swift in Sources */,
-				3D75F3B127860C770039AD63 /* ViewController.swift in Sources */,
+				3D75F43327861D4E0039AD63 /* ListViewWorker.swift in Sources */,
 				3D75F40B278614510039AD63 /* DashboardWorker.swift in Sources */,
+				3D75F43727861D4E0039AD63 /* ListViewInteractor.swift in Sources */,
 				3D75F418278615160039AD63 /* FontUtility.swift in Sources */,
+				3D75F43227861D4E0039AD63 /* ListViewPresenter.swift in Sources */,
 				3D75F3AD27860C770039AD63 /* AppDelegate.swift in Sources */,
 				3D75F4112786148B0039AD63 /* BaseViewController.swift in Sources */,
 				3D75F40D278614510039AD63 /* DashboardModels.swift in Sources */,
 				3D75F426278617620039AD63 /* DashboardTableViewCell.swift in Sources */,
 				3D75F3AF27860C770039AD63 /* SceneDelegate.swift in Sources */,
+				3D75F43627861D4E0039AD63 /* ListViewViewController.swift in Sources */,
+				3D75F451278623280039AD63 /* LoadingTableViewCell.swift in Sources */,
+				3D75F43A27861EE30039AD63 /* Episode.swift in Sources */,
 				3D75F42A278619730039AD63 /* CustomLabel.swift in Sources */,
 				3D75F40F278614510039AD63 /* DashboardInteractor.swift in Sources */,
+				3D75F448278620620039AD63 /* ApiResponse.swift in Sources */,
 				3D75F414278614D60039AD63 /* UIViewControllerExtension.swift in Sources */,
+				3D75F43427861D4E0039AD63 /* ListViewRouter.swift in Sources */,
+				3D75F44C278622EC0039AD63 /* CustomTableViewCell.swift in Sources */,
 				3D75F41A2786154C0039AD63 /* AppConstants.swift in Sources */,
+				3D87A297278626B300B3DC25 /* Location.swift in Sources */,
 				3D75F40E278614510039AD63 /* DashboardViewController.swift in Sources */,
+				3D75F43C27861F020039AD63 /* Character.swift in Sources */,
+				3D75F446278620290039AD63 /* ApiRequest.swift in Sources */,
 				3D75F41E278616220039AD63 /* StringExtension.swift in Sources */,
 				3D75F3E127860EF50039AD63 /* Environment.swift in Sources */,
 				3D75F416278614FE0039AD63 /* ColorUtility.swift in Sources */,
