@@ -57,7 +57,7 @@ class DetailPresenter: DetailPresentationLogic {
             viewModel.displayedSections.append(locations)
 
 
-            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Episode \($0.components(separatedBy: "/").last ?? "")", subTitle: "", showDetail: true, detailType: .locations)})
+            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Episode \($0.components(separatedBy: "/").last ?? "")", subTitle: "", showDetail: true, detailType: .episodes)})
 
 
             let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episodes", displayedListItem: episodeItems ?? [])
