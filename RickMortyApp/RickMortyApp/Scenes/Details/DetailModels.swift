@@ -11,6 +11,10 @@
 //
 
 import UIKit
+enum CellType {
+    case ImageCell
+    case ItemCell
+}
 enum DetailType {
     case characters
     case episodes
@@ -44,6 +48,7 @@ enum DetailModel {
             struct DisplayedSection {
                 var sectionTitle: String
                 var displayedListItem: [DisplayedListItem]
+                var cellType: CellType = .ItemCell
             }
 
             struct DisplayedListItem {
@@ -54,6 +59,7 @@ enum DetailModel {
                 /// Set to `true`  if detailed data is present for the current item and allow to show next screen
                 var showDetail: Bool
                 var isLoadingCell: Bool = false
+                var detailType: DetailType?
             }
 
             var displayedSections: [DisplayedSection]
@@ -66,6 +72,7 @@ enum DetailModel {
     enum FetchItemDetails {
         struct Request {
             var index: Int
+            var detailType: DetailType?
         }
         struct Response {
         }

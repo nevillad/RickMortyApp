@@ -89,6 +89,7 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
         tvDetails.dataSource = self
         tvDetails.separatorStyle = .none
         tvDetails.register(UINib(nibName: CUSTOM_TABLEVIEW_CELL_ID, bundle: Bundle.init(for: CustomTableViewCell.self)), forCellReuseIdentifier: CUSTOM_TABLEVIEW_CELL_ID)
+        tvDetails.register(UINib(nibName: IMAGE_TABLEVIEW_CELL_ID, bundle: Bundle.init(for: ImageTableViewCell.self)), forCellReuseIdentifier: IMAGE_TABLEVIEW_CELL_ID)
         tvDetails.backgroundColor = Color.lightBackground.value
         tvDetails.rowHeight = UITableView.automaticDimension
         tvDetails.estimatedRowHeight = 300
@@ -143,25 +144,38 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let sectionData = viewModel.displayedSections[indexPath.section]
+
         let itemData = sectionData.displayedListItem[indexPath.row]
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CUSTOM_TABLEVIEW_CELL_ID) as? CustomTableViewCell else {
-            return UITableViewCell()
+        switch sectionData.cellType {
+        case .ImageCell:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: IMAGE_TABLEVIEW_CELL_ID) as? ImageTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.ivProfile?.downloadImageFrom(link: itemData.imageURL ?? "" , contentMode: .scaleAspectFit)
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CUSTOM_TABLEVIEW_CELL_ID) as? CustomTableViewCell else {
+                return UITableViewCell()
+            }
+
+            cell.lblTitle.text = itemData.title
+            cell.lblSubtitle.text = itemData.subTitle
+            cell.ivDisclosure.isHidden = !itemData.showDetail
+            cell.lblInfo.text = itemData.info
+            cell.lblInfo.isHidden = itemData.info == nil //|| itemData.info?.isEmpty()
+            if let imageURL = itemData.imageURL {
+                cell.ivIcon.isHidden = false
+                cell.ivIcon.contentMode = .scaleAspectFit
+                cell.ivIcon.image = UIImage(systemName: imageURL)
+            } else {
+                cell.ivIcon.isHidden = true
+            }
+
+            return cell
         }
 
-        cell.lblTitle.text = itemData.title
-        cell.lblSubtitle.text = itemData.subTitle
-        cell.ivDisclosure.isHidden = !itemData.showDetail
-        cell.lblInfo.text = itemData.info
-        cell.lblInfo.isHidden = itemData.info == nil //|| itemData.info?.isEmpty()
-        if let imageURL = itemData.imageURL {
-            cell.ivIcon.isHidden = false
-            cell.ivIcon.downloadImageFrom(link: imageURL, contentMode: .scaleAspectFill)
-        } else {
-            cell.ivIcon.isHidden = true
-        }
 
-        return cell
 
     }
 
@@ -172,7 +186,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let itemData = viewModel.displayedSections[indexPath.section].displayedListItem[indexPath.row]
         if itemData.showDetail {
-            interactor?.fetchItemDetails(request: DetailModel.FetchItemDetails.Request(index: indexPath.row))
+            interactor?.fetchItemDetails(request: DetailModel.FetchItemDetails.Request(index: indexPath.row, detailType: itemData.detailType))
         }
     }
 

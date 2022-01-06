@@ -69,8 +69,14 @@ class DetailInteractor: DetailBusinessLogic, DetailDataStore {
 
         switch detailType {
         case .characters:
-            if let strUrl = self.character?.episode?[request.index] {
-                getDetails(url: strUrl,responseObject: Episode.self)
+            if request.detailType == .locations {
+                if let strUrl = request.index == 0 ?  self.character?.location?.url : self.character?.origin?.url {
+                    getDetails(url: strUrl,responseObject: LocationDetails.self)
+                }
+            } else {
+                if let strUrl = self.character?.episode?[request.index] {
+                    getDetails(url: strUrl,responseObject: Episode.self)
+                }
             }
         case .episodes:
             if let strUrl = self.episode?.characters?[request.index] {

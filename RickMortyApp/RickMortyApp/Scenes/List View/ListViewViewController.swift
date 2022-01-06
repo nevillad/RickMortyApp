@@ -70,13 +70,11 @@ class ListViewController: BaseViewController, ListDisplayLogic {
         super.viewDidLoad()
         self.title = router?.dataStore?.screenTitle
         registerCustomTableViewCell()
-        setupFetchFromLocalDataStore()
-
+        setupFetchFromRemoteDataStore()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupFetchFromRemoteDataStore()
     }
 
     override func viewDidAppear(_ animated: Bool) {

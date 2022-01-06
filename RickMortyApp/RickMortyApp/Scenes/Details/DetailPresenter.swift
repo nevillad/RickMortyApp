@@ -32,26 +32,32 @@ class DetailPresenter: DetailPresentationLogic {
         var viewModel = DetailModel.FetchDetails.ViewModel(displayedSections: [])
         if let charater = response.character {
 
-            let spices = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Species", subTitle: "", info: charater.species, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let image = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "", subTitle: "", info: charater.species, imageURL: charater.image, showDetail: false, isLoadingCell: false)
 
-            let gender = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Gender", subTitle: "", info: charater.gender, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let profileSection = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Profile", displayedListItem: [image], cellType: .ImageCell)
+            viewModel.displayedSections.append(profileSection)
 
-            let status = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Status", subTitle: "", info: charater.status, imageURL: nil, showDetail: false, isLoadingCell: false)
+
+            let spices = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Species", subTitle: "", info: charater.species, imageURL: "hare", showDetail: false, isLoadingCell: false)
+
+            let gender = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Gender", subTitle: "", info: charater.gender, imageURL: "eyes", showDetail: false, isLoadingCell: false)
+
+            let status = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Status", subTitle: "", info: charater.status, imageURL: "waveform.path.ecg.rectangle", showDetail: false, isLoadingCell: false)
 
             let displayInfo = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Info", displayedListItem: [spices, gender, status])
             viewModel.displayedSections.append(displayInfo)
 
 
             //Locations
-            let location = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Location", subTitle: "", info: charater.location?.name, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let location = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Location", subTitle: "", info: charater.location?.name, imageURL: "map", showDetail: true, isLoadingCell: false, detailType: .locations)
 
-            let origin = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Origin", subTitle: "", info: charater.origin?.name, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let origin = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Origin", subTitle: "", info: charater.origin?.name, imageURL: "paperplane", showDetail: true, isLoadingCell: false, detailType: .locations)
 
             let locations = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Location", displayedListItem: [location, origin])
             viewModel.displayedSections.append(locations)
 
 
-            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Episode \($0.components(separatedBy: "/").last ?? "")", subTitle: "", showDetail: true)})
+            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Episode \($0.components(separatedBy: "/").last ?? "")", subTitle: "", showDetail: true, detailType: .locations)})
 
 
             let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episodes", displayedListItem: episodeItems ?? [])
@@ -59,11 +65,11 @@ class DetailPresenter: DetailPresentationLogic {
         }
 
         if let episode = response.episode {
-            let name = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Name", subTitle: "", info: episode.name ?? "", imageURL: nil, showDetail: false, isLoadingCell: false)
+            let name = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Name", subTitle: "", info: episode.name ?? "", imageURL: "info", showDetail: false, isLoadingCell: false)
 
-            let airDate = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Air Date", subTitle: "", info: episode.airDate, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let airDate = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Air Date", subTitle: "", info: episode.airDate, imageURL: "calendar", showDetail: false, isLoadingCell: false)
 
-            let code = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Code", subTitle: "", info: episode.episode, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let code = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Code", subTitle: "", info: episode.episode, imageURL: "barcode", showDetail: false, isLoadingCell: false)
 
             let displayInfo = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Info", displayedListItem: [name, airDate, code])
             viewModel.displayedSections.append(displayInfo)
@@ -77,11 +83,11 @@ class DetailPresenter: DetailPresentationLogic {
             }
         }
         if let locationDetails = response.locationDetails {
-            let name = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Name", subTitle: "", info: locationDetails.name ?? "", imageURL: nil, showDetail: false, isLoadingCell: false)
+            let name = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Name", subTitle: "", info: locationDetails.name ?? "", imageURL: "info", showDetail: false, isLoadingCell: false)
 
-            let dimension = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Dimension", subTitle: "", info: locationDetails.dimension, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let dimension = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Dimension", subTitle: "", info: locationDetails.dimension, imageURL: "tornado", showDetail: false, isLoadingCell: false)
 
-            let type = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Type", subTitle: "", info: locationDetails.type, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let type = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Type", subTitle: "", info: locationDetails.type, imageURL: "newspaper", showDetail: false, isLoadingCell: false)
 
             let displayInfo = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Info", displayedListItem: [name, dimension, type])
             viewModel.displayedSections.append(displayInfo)
