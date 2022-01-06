@@ -21,6 +21,8 @@ protocol DetailPresentationLogic {
 }
 
 class DetailPresenter: DetailPresentationLogic {
+
+
     weak var viewController: DetailDisplayLogic?
 
     // MARK: Do DetailDetails
@@ -30,29 +32,29 @@ class DetailPresenter: DetailPresentationLogic {
         var viewModel = DetailModel.FetchDetails.ViewModel(displayedSections: [])
         if let charater = response.character {
 
-            let spices = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Species", subTitle: "", info: charater.species.rawValue, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let spices = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Species", subTitle: "", info: charater.species, imageURL: nil, showDetail: false, isLoadingCell: false)
 
-            let gender = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Gender", subTitle: "", info: charater.gender.rawValue, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let gender = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Gender", subTitle: "", info: charater.gender, imageURL: nil, showDetail: false, isLoadingCell: false)
 
-            let status = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Status", subTitle: "", info: charater.status.rawValue, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let status = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Status", subTitle: "", info: charater.status, imageURL: nil, showDetail: false, isLoadingCell: false)
 
             let displayInfo = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Info", displayedListItem: [spices, gender, status])
             viewModel.displayedSections.append(displayInfo)
 
 
             //Locations
-            let location = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Location", subTitle: "", info: charater.location.name, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let location = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Location", subTitle: "", info: charater.location?.name, imageURL: nil, showDetail: false, isLoadingCell: false)
 
-            let origin = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Origin", subTitle: "", info: charater.origin.name, imageURL: nil, showDetail: false, isLoadingCell: false)
+            let origin = DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Origin", subTitle: "", info: charater.origin?.name, imageURL: nil, showDetail: false, isLoadingCell: false)
 
             let locations = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Location", displayedListItem: [location, origin])
             viewModel.displayedSections.append(locations)
 
 
-            let episodeItems = charater.episode.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0, subTitle: "", showDetail: true)})
+            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0, subTitle: "", showDetail: true)})
 
 
-            let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episode", displayedListItem: episodeItems)
+            let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episode", displayedListItem: episodeItems ?? [])
             viewModel.displayedSections.append(episode)
         }
 
@@ -83,7 +85,7 @@ class DetailPresenter: DetailPresentationLogic {
 
             let displayInfo = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Info", displayedListItem: [name, dimension, type])
             viewModel.displayedSections.append(displayInfo)
-            
+
             var residetnsItems: [DetailModel.FetchDetails.ViewModel.DisplayedListItem] = []
             if let residents = locationDetails.residents {
                 residetnsItems = residents.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0 , subTitle: "", showDetail: true)})
@@ -98,7 +100,7 @@ class DetailPresenter: DetailPresentationLogic {
     }
 
     func presentNextScene(response: DetailModel.NextScene.Response) {
-        let viewModel = DetailModel.NextScene.ViewModel()
+        let viewModel = DetailModel.NextScene.ViewModel(character: response.character, episode: response.episode, locationDetails: response.locationDetails, detailsType: response.detailsType)
         viewController?.displayNextScene(viewModel: viewModel)
     }
 

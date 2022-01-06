@@ -12,8 +12,8 @@
 
 import UIKit
 
-@objc protocol DetailRoutingLogic {
-    func showNextScene()
+protocol DetailRoutingLogic {
+    func showNextScene(charater: Character?, episode: Episode?, locationDetails: LocationDetails?, detailsType: DetailType?)
 }
 
 protocol DetailDataPassing {
@@ -25,8 +25,17 @@ class DetailRouter: NSObject, DetailRoutingLogic, DetailDataPassing {
     var dataStore: DetailDataStore?
 
     // MARK: Navigation
-    func showNextScene() {
+    func showNextScene(charater: Character?, episode: Episode?, locationDetails: LocationDetails?, detailsType: DetailType?) {
 
+        if let detailsType = detailsType {
+            let detailViewController = DetailViewController.instantiateFromStoryboard()
+            var destinationDS = detailViewController.router?.dataStore
+            destinationDS?.character = charater
+            destinationDS?.episode = episode
+            destinationDS?.locationDetails = locationDetails
+            destinationDS?.detailType = detailsType
+            viewController?.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }
 
@@ -34,8 +43,8 @@ class DetailRouter: NSObject, DetailRoutingLogic, DetailDataPassing {
 extension DetailRouter {
 
     /*
-    func passDataTo(_ destinationDS: inout <destinationDataStore>?, from sourceDS: DetailDataStore?) {
+     func passDataTo(_ destinationDS: inout <destinationDataStore>?, from sourceDS: DetailDataStore?) {
 
-    }
-    */
+     }
+     */
 }

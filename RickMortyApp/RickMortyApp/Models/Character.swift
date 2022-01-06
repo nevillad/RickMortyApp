@@ -22,17 +22,17 @@ struct Info: Codable {
 
 // MARK: - Character
 struct Character: Codable {
-    let id: Int
+    let id: Int?
     let name: String?
-    let status: Status
-    let species: Species
+    let status: String?
+    let species: String?
     let type: String?
-    let gender: Gender
-    let origin, location: Location
+    let gender: String?
+    let origin, location: Location?
     let image: String?
-    let episode: [String]
-    let url: String
-    let created: String
+    let episode: [String]?
+    let url: String?
+    let created: String?
 }
 
 enum Gender: String, Codable {
@@ -43,13 +43,14 @@ enum Gender: String, Codable {
 
 // MARK: - Location
 struct Location: Codable {
-    let name: String
-    let url: String
+    let name: String?
+    let url: String?
 }
 
 enum Species: String, Codable {
     case alien = "Alien"
     case human = "Human"
+    case unknown = "unknown"
 }
 
 enum Status: String, Codable {

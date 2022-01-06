@@ -62,12 +62,31 @@ enum DetailModel {
         }
     }
 
-    enum NextScene {
+
+    enum FetchItemDetails {
         struct Request {
+            var index: Int
         }
         struct Response {
         }
         struct ViewModel {
+        }
+    }
+    enum NextScene {
+        struct Request {
+        }
+        struct Response {
+            var character: Character?
+            var episode: Episode?
+            var locationDetails: LocationDetails?
+            var detailsType: DetailType?
+        }
+
+        struct ViewModel {
+            var character: Character?
+            var episode: Episode?
+            var locationDetails: LocationDetails?
+            var detailsType: DetailType?
         }
     }
 }

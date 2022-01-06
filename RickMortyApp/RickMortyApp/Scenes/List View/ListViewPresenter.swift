@@ -43,8 +43,9 @@ class ListPresenter: ListPresentationLogic {
         if let characters = response.characters {
             for character in characters {
                 var countString = ""
-                let count = character.episode.count
-                countString = "\(count) episode\(count > 1 ? "'s" : "")"
+                if let count = character.episode?.count {
+                    countString = "\(count) episode\(count > 1 ? "'s" : "")"
+                }
 
                 if let name = character.name {
                     let item = ListModels.FetchFromRemoteDataStore.ViewModel.DisplayedListItem(title: name, subTitle: countString,imageURL: character.image, showDetail: true)

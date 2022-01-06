@@ -109,7 +109,7 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
     }
 
     func displayNextScene(viewModel: DetailModel.NextScene.ViewModel) {
-        
+        router?.showNextScene(charater: viewModel.character, episode: viewModel.episode, locationDetails: viewModel.locationDetails, detailsType: viewModel.detailsType)
     }
 
     func displayLoader(type: DetailLoaderType) {
@@ -169,10 +169,10 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        /*let itemData = displayedItems[indexPath.row]
-        if !itemData.isLoadingCell {
-            router?.routeToNext(showDetail: itemData.showDetail, index: indexPath.row)
-        }*/
+        let itemData = viewModel.displayedSections[indexPath.section].displayedListItem[indexPath.row]
+        if itemData.showDetail {
+            interactor?.fetchItemDetails(request: DetailModel.FetchItemDetails.Request(index: indexPath.row))
+        }
     }
 
 

@@ -12,8 +12,6 @@
 
 import UIKit
 
-
-
 protocol ListBusinessLogic {
     func fetchFromLocalDataStore(with request: ListModels.FetchFromLocalDataStore.Request)
     func fetchFromRemoteDataStore(with request: ListModels.FetchFromRemoteDataStore.Request)
@@ -32,7 +30,6 @@ protocol ListDataStore {
     /// `-1` represents there is no item selected
     var selectdIndex: Int { get set }
     /// total data available for particular entity type. This is used for pagination activity
-    var totalCount: Int { get set }
     /// last index of a data returned by server so that next data can be fetched based on it. This is used for pagonation activity
     var lastItemIndex: Int { get set }
 
@@ -58,9 +55,7 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
     var locations: [LocationDetails]? = []
 
     var selectdIndex: Int = -1
-    var totalCount: Int = 0
     var lastItemIndex: Int = 1
-    var pageCount = 0
 
     var filterKey: String?
 
@@ -87,10 +82,11 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
         }
     }
 
+
+    ///// if self.lastItemIndex == 1 it is assumed that there is no further data to show otherwise it will load same data again and again to create infinite loop.
+
     private func getCharacters() {
         let finalUrl = ApiActions.getCharacters.finalURL + "?page=\(self.lastItemIndex)"
-
-         //+ "?limit=\(limit)&skip=\(lastItemIndex)"
         let resource = Resource<CharacterData>(url: finalUrl)
         debugPrint("Final url is: \(resource.url)")
 
@@ -99,15 +95,12 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
             switch result {
             case .success(let characterData):
                 self.characters?.append(contentsOf: characterData.results)
-
-                //self.totalCount = characterData.info.count ?? self.characters?.count ?? 0
-
-                /// if self.lastItemIndex == 1 it is assumed that there is no further data to show otherwise it will load same data again and again to create infinite loop.
                 debugPrint(characterData.results.count)
+                var allowToPaginate = false
                 if characterData.info.next != nil {
                     self.lastItemIndex += 1
+                    allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= characterData.info.pages
                 }
-                let allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= characterData.info.pages
 
                 let response = ListModels.FetchFromRemoteDataStore.Response(episodes: nil, characters: self.characters, locations: nil, didAllowToFetchNextData: allowToPaginate)
                 self.presenter?.presentFetchFromRemoteDataStore(with: response)
@@ -128,17 +121,13 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
             switch result {
             case .success(let episodesData):
                 self.episodes?.append(contentsOf: episodesData.results ?? [])
-
+                var allowToPaginate = false
                 if episodesData.info.next != nil {
                     self.lastItemIndex += 1
+                    allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= episodesData.info.pages
                 }
-                let allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= episodesData.info.pages
-
                 let response = ListModels.FetchFromRemoteDataStore.Response(episodes: self.episodes, characters: nil, locations: nil, didAllowToFetchNextData: allowToPaginate)
                 self.presenter?.presentFetchFromRemoteDataStore(with: response)
-
-
-                break
             case .failure(let error):
                 self.presenter?.presentError(type: .custom(message: error.localizedDescription))
             }
@@ -156,10 +145,11 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
             case .success(let locationData):
                 self.locations?.append(contentsOf: locationData.results)
 
+                var allowToPaginate = false
                 if locationData.info.next != nil {
                     self.lastItemIndex += 1
+                    allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= locationData.info.pages
                 }
-                let allowToPaginate = self.lastItemIndex != 1 && self.lastItemIndex <= locationData.info.pages
 
                 let response = ListModels.FetchFromRemoteDataStore.Response(episodes: nil, characters: nil, locations: self.locations, didAllowToFetchNextData: allowToPaginate)
                 self.presenter?.presentFetchFromRemoteDataStore(with: response)
