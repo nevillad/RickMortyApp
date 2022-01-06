@@ -51,10 +51,10 @@ class DetailPresenter: DetailPresentationLogic {
             viewModel.displayedSections.append(locations)
 
 
-            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0, subTitle: "", showDetail: true)})
+            let episodeItems = charater.episode?.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Episode \($0.components(separatedBy: "/").last ?? "")", subTitle: "", showDetail: true)})
 
 
-            let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episode", displayedListItem: episodeItems ?? [])
+            let episode = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Episodes", displayedListItem: episodeItems ?? [])
             viewModel.displayedSections.append(episode)
         }
 
@@ -71,7 +71,7 @@ class DetailPresenter: DetailPresentationLogic {
 
             var characterItems: [DetailModel.FetchDetails.ViewModel.DisplayedListItem] = []
             if let characters = episode.characters {
-                characterItems = characters.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0 , subTitle: "", showDetail: true)})
+                characterItems = characters.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Character \($0.components(separatedBy: "/").last ?? "")" , subTitle: "", showDetail: true)})
                 let character = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Charactes", displayedListItem: characterItems)
                 viewModel.displayedSections.append(character)
             }
@@ -88,7 +88,10 @@ class DetailPresenter: DetailPresentationLogic {
 
             var residetnsItems: [DetailModel.FetchDetails.ViewModel.DisplayedListItem] = []
             if let residents = locationDetails.residents {
-                residetnsItems = residents.map({ DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: $0 , subTitle: "", showDetail: true)})
+                residetnsItems = residents.map({
+                    DetailModel.FetchDetails.ViewModel.DisplayedListItem(title: "Character \($0.components(separatedBy: "/").last ?? "")" , subTitle: "", showDetail: true)
+
+                })
                 let character = DetailModel.FetchDetails.ViewModel.DisplayedSection(sectionTitle: "Residents", displayedListItem: residetnsItems)
                 viewModel.displayedSections.append(character)
             }

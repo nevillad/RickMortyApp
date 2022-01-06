@@ -33,10 +33,10 @@ open class ApiRequest {
         }
 
         let request = sessionManager?.request( url,
-                                         method: method,
-                                         parameters: parameters,
-                                         encoding: encode,
-                                         headers: headers)
+                                               method: method,
+                                               parameters: parameters,
+                                               encoding: encode,
+                                               headers: headers)
         request?.responseDecodable(completionHandler: completionHandler)
     }
 

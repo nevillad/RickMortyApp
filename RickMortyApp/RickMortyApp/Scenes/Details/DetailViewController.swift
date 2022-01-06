@@ -74,6 +74,7 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = router?.dataStore?.screenTitle
         interactor?.initialise(showLoader: true)
         registerCustomTableViewCell()
     }

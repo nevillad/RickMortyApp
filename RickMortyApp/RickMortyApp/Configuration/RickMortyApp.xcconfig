@@ -34,7 +34,7 @@ BUILD = 1
 // MARK: - Font Value - Inherit from base
 
 // MARK: - Theme Color Values
-COLOR_PRIMARY = #E95B1CFF
+COLOR_PRIMARY = #000000FF
 COLOR_SECONDARY = #CB4003FF
 COLOR_SEPARATOR = #F2F2F
 

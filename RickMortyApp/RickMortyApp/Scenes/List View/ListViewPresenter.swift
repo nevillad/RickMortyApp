@@ -39,7 +39,7 @@ class ListPresenter: ListPresentationLogic {
 
     func presentFetchFromRemoteDataStore(with response: ListModels.FetchFromRemoteDataStore.Response) {
         var displayedItems: [ListModels.FetchFromRemoteDataStore.ViewModel.DisplayedListItem] = []
-
+        var displayLoadMoreText = "Loading more "
         if let characters = response.characters {
             for character in characters {
                 var countString = ""
@@ -52,6 +52,7 @@ class ListPresenter: ListPresentationLogic {
                     displayedItems.append(item)
                 }
             }
+            displayLoadMoreText += "characters."
         } else if let episodes = response.episodes {
             for episode in episodes {
                 var name = ""
@@ -63,6 +64,7 @@ class ListPresenter: ListPresentationLogic {
                     displayedItems.append(item)
                 }
             }
+            displayLoadMoreText += "episodes."
         } else if let locations = response.locations {
             for location in locations {
                 var countString = ""
@@ -75,10 +77,11 @@ class ListPresenter: ListPresentationLogic {
                     displayedItems.append(item)
                 }
             }
+            displayLoadMoreText += "locations."
         }
 
         if response.didAllowToFetchNextData {
-            let item = ListModels.FetchFromRemoteDataStore.ViewModel.DisplayedListItem(title: "Loading more. Please wait...", subTitle: "", showDetail: false, isLoadingCell: true)
+            let item = ListModels.FetchFromRemoteDataStore.ViewModel.DisplayedListItem(title: "\(displayLoadMoreText) Please wait...", subTitle: "", showDetail: false, isLoadingCell: true)
             displayedItems.append(item)
         }
 

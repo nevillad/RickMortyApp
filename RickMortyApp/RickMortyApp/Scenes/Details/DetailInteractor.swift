@@ -84,6 +84,7 @@ class DetailInteractor: DetailBusinessLogic, DetailDataStore {
     }
 
     private func getDetails<T: Decodable>(url: String, responseObject: T.Type)  {
+        self.presenter?.presentLoader(type: .general)
         let resource = Resource<T>(url: url)
         debugPrint("Final url is: \(resource.url)")
 

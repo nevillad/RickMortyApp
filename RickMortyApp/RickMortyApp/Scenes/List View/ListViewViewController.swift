@@ -71,6 +71,7 @@ class ListViewController: BaseViewController, ListDisplayLogic {
         self.title = router?.dataStore?.screenTitle
         registerCustomTableViewCell()
         setupFetchFromLocalDataStore()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {

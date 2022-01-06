@@ -46,27 +46,32 @@ class ListRouter: NSObject, ListRoutingLogic, ListDataPassing {
      func passDataTo(_ destinationDS: inout DetailDataStore, from sourceDS: ListDataStore) {
 
         let index = sourceDS.selectdIndex
-
+        var title = ""
         switch sourceDS.listScreenType {
         case .characters:
-            destinationDS.screenTitle = "Character"
+            title = "Character"
             destinationDS.detailType = .characters
             if let characters = sourceDS.characters, characters.count > index {
                 destinationDS.character = characters[index]
-
+                title = characters[index].name ?? "Character"
             }
+
         case .episodes:
-            destinationDS.screenTitle = "Episode"
+            title = "Episode"
             destinationDS.detailType = .episodes
             if let episodes = sourceDS.episodes, episodes.count > index {
                 destinationDS.episode = episodes[index]
+                title = episodes[index].name ?? "Episode"
             }
+
         case .locations:
-            destinationDS.screenTitle = "Location"
+            title = "Location"
             destinationDS.detailType = .locations
             if let locations = sourceDS.locations, locations.count > index {
                 destinationDS.locationDetails = locations[index]
+                title = locations[index].name ?? "Location"
             }
         }
+        destinationDS.screenTitle = title
      }
 }

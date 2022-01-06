@@ -32,6 +32,7 @@ extension UIViewController: UINavigationControllerDelegate {
             [NSAttributedString.Key.foregroundColor: Color.navBarTitle.value, NSAttributedString.Key.font: Font(.installed(.medium), size: .standard(.h4)).instance]
         self.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: Font(.installed(.book), size: .standard(.h5)).instance], for:.normal)
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: Font(.installed(.book), size: .standard(.h5)).instance], for:.normal)
+        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
 

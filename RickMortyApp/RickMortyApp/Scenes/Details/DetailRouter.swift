@@ -34,6 +34,8 @@ class DetailRouter: NSObject, DetailRoutingLogic, DetailDataPassing {
             destinationDS?.episode = episode
             destinationDS?.locationDetails = locationDetails
             destinationDS?.detailType = detailsType
+
+            destinationDS?.screenTitle = charater?.name ?? episode?.name ?? locationDetails?.name ?? "Details"
             viewController?.navigationController?.pushViewController(detailViewController, animated: true)
         }
     }

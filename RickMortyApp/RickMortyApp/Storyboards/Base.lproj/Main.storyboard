@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-102" y="113"/>
         </scene>
-        <!--Rick & Morty-->
+        <!--REDspace - NL-->
         <scene sceneID="biM-Ot-kEQ">
             <objects>
                 <viewController id="hqr-XN-VeE" customClass="DashboardViewController" customModule="RickMortyApp" sceneMemberID="viewController">
@@ -32,31 +32,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RM" translatesAutoresizingMaskIntoConstraints="NO" id="oaI-qv-ICK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RY4-1N-SxS"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Xh-qs-NJb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
                                 <color key="separatorColor" systemColor="labelColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="T8r-bl-tlN">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="1.1920928955078125e-07"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T8r-bl-tlN" id="pof-fF-amp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Kbd-la-WJX">
-                                        <rect key="frame" x="0.0" y="24.50000011920929" width="414" height="1.1920928955078125e-07"/>
+                                        <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kbd-la-WJX" id="7dT-wR-XKM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uMV-xa-Fko">
-                                        <rect key="frame" x="0.0" y="24.500000238418579" width="414" height="1.1920928955078125e-07"/>
+                                        <rect key="frame" x="0.0" y="111.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uMV-xa-Fko" id="58F-jk-JRx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1.1920928955078125e-07"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -67,13 +74,16 @@
                         <viewLayoutGuide key="safeArea" id="daQ-Um-eKk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oaI-qv-ICK" firstAttribute="top" secondItem="daQ-Um-eKk" secondAttribute="top" id="42d-tb-cyA"/>
                             <constraint firstItem="4Xh-qs-NJb" firstAttribute="trailing" secondItem="daQ-Um-eKk" secondAttribute="trailing" id="Gv1-V5-EuT"/>
+                            <constraint firstItem="daQ-Um-eKk" firstAttribute="trailing" secondItem="oaI-qv-ICK" secondAttribute="trailing" id="LdX-n4-rhB"/>
+                            <constraint firstItem="4Xh-qs-NJb" firstAttribute="top" secondItem="oaI-qv-ICK" secondAttribute="bottom" constant="2" id="RmI-Ek-GmA"/>
                             <constraint firstItem="4Xh-qs-NJb" firstAttribute="bottom" secondItem="daQ-Um-eKk" secondAttribute="bottom" id="iaQ-SK-zXl"/>
-                            <constraint firstItem="4Xh-qs-NJb" firstAttribute="top" secondItem="daQ-Um-eKk" secondAttribute="top" id="mHM-kR-SOM"/>
+                            <constraint firstItem="oaI-qv-ICK" firstAttribute="leading" secondItem="daQ-Um-eKk" secondAttribute="leading" id="sia-cC-R1l"/>
                             <constraint firstItem="4Xh-qs-NJb" firstAttribute="leading" secondItem="daQ-Um-eKk" secondAttribute="leading" id="zgr-jn-Mna"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Rick &amp; Morty" id="z9R-th-Xo1"/>
+                    <navigationItem key="navigationItem" title="REDspace - NL" id="z9R-th-Xo1"/>
                     <connections>
                         <outlet property="tvActions" destination="4Xh-qs-NJb" id="0Wh-Cm-0MI"/>
                     </connections>
@@ -120,7 +130,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-f5-smd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-f5-smd">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,6 +155,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="RM" width="1280" height="544"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
