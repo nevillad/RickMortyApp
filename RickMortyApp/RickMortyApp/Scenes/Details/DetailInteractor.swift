@@ -13,7 +13,8 @@
 import UIKit
 
 protocol DetailBusinessLogic {
-    func doDetailDetails(request: DetailModel.DetailDetails.Request)
+    func doDetailDetails(request: DetailModel.FetchDetails.Request)
+    func fetchDetails(request: DetailModel.FetchDetails.Request)
     func initialise(showLoader: Bool)
 }
 
@@ -40,13 +41,26 @@ class DetailInteractor: DetailBusinessLogic, DetailDataStore {
 
     // MARK: Do DetailDetails
 
-    func doDetailDetails(request: DetailModel.DetailDetails.Request)
-    {
+    func doDetailDetails(request: DetailModel.FetchDetails.Request) {
         worker = DetailWorker()
         worker?.doSomeWork()
 
-        let response = DetailModel.DetailDetails.Response()
-        presenter?.presentDetailDetails(response: response)
+
+    }
+
+    func fetchDetails(request: DetailModel.FetchDetails.Request) {
+
+        var response = DetailModel.FetchDetails.Response()
+        switch detailType {
+        case .characters:
+            response.character = self.character
+        case .episodes:
+            response.episode = self.episode
+        case .locations:
+            response.locationDetails = self.locationDetails
+        }
+
+        presenter?.presentDetails(response: response)
     }
 
     func initialise(showLoader: Bool = true) {

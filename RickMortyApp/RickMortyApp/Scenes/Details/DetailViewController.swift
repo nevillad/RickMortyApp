@@ -13,7 +13,7 @@
 import UIKit
 
 protocol DetailDisplayLogic: class {
-    func displayDetailDetails(viewModel: DetailModel.DetailDetails.ViewModel)
+    func displayDetails(viewModel: DetailModel.FetchDetails.ViewModel)
     func displayNextScene(viewModel: DetailModel.NextScene.ViewModel)
     func displayLoader(type: DetailLoaderType)
     func hideLoader(type: DetailLoaderType)
@@ -23,7 +23,7 @@ protocol DetailDisplayLogic: class {
 class DetailViewController: BaseViewController, DetailDisplayLogic {
     var interactor: DetailBusinessLogic?
     var router: (NSObjectProtocol & DetailRoutingLogic & DetailDataPassing)?
-
+    var viewModel = DetailModel.FetchDetails.ViewModel(displayedSections: [])
     class func instantiateFromStoryboard() ->  DetailViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as!  DetailViewController
@@ -80,6 +80,7 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        interactor?.fetchDetails(request: DetailModel.FetchDetails.Request())
     }
 
     func registerCustomTableViewCell() {
@@ -99,12 +100,12 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
     //@IBOutlet weak var nameTextField: UITextField!
 
     func doDetailDetails() {
-        let request = DetailModel.DetailDetails.Request()
+        let request = DetailModel.FetchDetails.Request()
         interactor?.doDetailDetails(request: request)
     }
 
-    func displayDetailDetails(viewModel: DetailModel.DetailDetails.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayDetails(viewModel: DetailModel.FetchDetails.ViewModel) {
+        self.viewModel = viewModel
     }
 
     func displayNextScene(viewModel: DetailModel.NextScene.ViewModel) {
@@ -131,32 +132,40 @@ class DetailViewController: BaseViewController, DetailDisplayLogic {
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.viewModel.displayedSections.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return self.viewModel.displayedSections[section].displayedListItem.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        //let itemData = displayedItems[indexPath.row]
+        let sectionData = viewModel.displayedSections[indexPath.section]
+        let itemData = sectionData.displayedListItem[indexPath.row]
+
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CUSTOM_TABLEVIEW_CELL_ID) as? CustomTableViewCell else {
             return UITableViewCell()
         }
 
-//        cell.lblTitle.text = itemData.title
-//        cell.lblSubtitle.text = itemData.subTitle
-//        cell.ivDisclosure.isHidden = !itemData.showDetail
-//        cell.lblInfo.text = itemData.info
-//        cell.lblInfo.isHidden = itemData.info == nil //|| itemData.info?.isEmpty()
-//        if let imageURL = itemData.imageURL {
-//            cell.ivIcon.isHidden = false
-//            cell.ivIcon.downloadImageFrom(link: imageURL, contentMode: .scaleAspectFill)
-//        } else {
-//            cell.ivIcon.isHidden = true
-//        }
+        cell.lblTitle.text = itemData.title
+        cell.lblSubtitle.text = itemData.subTitle
+        cell.ivDisclosure.isHidden = !itemData.showDetail
+        cell.lblInfo.text = itemData.info
+        cell.lblInfo.isHidden = itemData.info == nil //|| itemData.info?.isEmpty()
+        if let imageURL = itemData.imageURL {
+            cell.ivIcon.isHidden = false
+            cell.ivIcon.downloadImageFrom(link: imageURL, contentMode: .scaleAspectFill)
+        } else {
+            cell.ivIcon.isHidden = true
+        }
 
         return cell
 
+    }
 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.viewModel.displayedSections[section].sectionTitle
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -29,12 +29,36 @@ enum DetailErrorType {
 enum DetailModel {
     // MARK: Use cases
 
-    enum DetailDetails {
+    enum FetchDetails {
         struct Request {
         }
+
         struct Response {
+            var character: Character?
+            var episode: Episode?
+            var locationDetails: LocationDetails?
         }
+
         struct ViewModel {
+
+            struct DisplayedSection {
+                var sectionTitle: String
+                var displayedListItem: [DisplayedListItem]
+            }
+
+            struct DisplayedListItem {
+                var title: String
+                var subTitle: String
+                var info: String?
+                var imageURL: String?
+                /// Set to `true`  if detailed data is present for the current item and allow to show next screen
+                var showDetail: Bool
+                var isLoadingCell: Bool = false
+            }
+
+            var displayedSections: [DisplayedSection]
+
+
         }
     }
 
