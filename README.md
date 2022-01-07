@@ -1,20 +1,18 @@
 # Rick and Morty iOS App
 
-This is a sample app developed using UIKit framework and having support of minimum iOS version 13. While developing I have kept clean swift architechture in mind and have listed description below.
+This is a sample app developed using UIKit framework and having support of minimum iOS version 13. While developing I have kept clean swift architechture in mind and have listed description below. 
 
 - [x] [Clean Swift](https://clean-swift.com/)
-      In Clean Swift, your project structure is built around scenes. Here is an example how does one scene looks like. In other words, we will have a set of components for each scene that will "work" for our controller. These are the components<br /> 
+      Clean Swift architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols. In Clean Swift, your project structure is built around scenes and we have a set of components in each scene that will "work" for our controller. Following are the components<br /> 
       * **Models**<br /> 
       * **Router**<br /> 
       * **Worker**<br /> 
       * **Interactor**<br /> 
       * **Presenter**<br /> <br /> 
-      Clean architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), Each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols.
-      <br />
 
-- [x] Cached option with URLCache
-     - To avoid unwanted API requests for single day.
-           // Load offline data if available
+- [x] Cached option with **URLCache**
+     - To reduce the redundant API calls I've used URLCache to store respone for a particular day.
+           //Below are the steps to achive that
           - Step 1: Retrive url reponse cached for url request
           - Step 2: Check if url reponse cached is of same day
                    - If data is of same day return clouser with cached data
