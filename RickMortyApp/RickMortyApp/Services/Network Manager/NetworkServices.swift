@@ -13,7 +13,6 @@ enum CustomResult<T> {
     case failure(Error)
 }
 
-
 enum CustomeErrors: Error {
     case backend
     case decodingFailed
@@ -24,7 +23,6 @@ enum CustomeErrors: Error {
     ///To show top bar error pop up/ banner with auto dismissal
     case customErrorPopup(message: String)
 }
-
 
 /// HTTP method type
 enum HTTPMethod {
@@ -86,9 +84,9 @@ final class NetworkServices {
         // Load offline data if available
         //Step 1: Retrive url reponse cached for url request
         //Step 2: Check if url reponse cached is of same day
-                  ///If data is of same day retunr clouser with cached data
+        ///If data is of same day retunr clouser with cached data
         //Step 3: if response data found then cache those data
-                /// NOTE: nagative case not handle here assume response get success with 200 status code
+        /// NOTE: nagative case not handle here assume response get success with 200 status code
         //Step 4: Return local cache data if error occuered OR data not available
         ///Retrive url reponse cached for url request
 
