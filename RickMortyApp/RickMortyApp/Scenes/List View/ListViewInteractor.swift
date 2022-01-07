@@ -32,9 +32,6 @@ protocol ListDataStore {
     /// total data available for particular entity type. This is used for pagination activity
     /// last index of a data returned by server so that next data can be fetched based on it. This is used for pagonation activity
     var lastItemIndex: Int { get set }
-
-    /// To filter out array of authors and quotes based on value provided from caller object.
-    var filterKey: String? { get set }
 }
 
 class ListInteractor: ListBusinessLogic, ListDataStore {
@@ -82,15 +79,12 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
         }
     }
 
-
-    ///// if self.lastItemIndex == 1 it is assumed that there is no further data to show otherwise it will load same data again and again to create infinite loop.
-
     private func getCharacters() {
         let finalUrl = ApiActions.getCharacters.finalURL + "?page=\(self.lastItemIndex)"
         let resource = Resource<CharacterData>(url: finalUrl)
         debugPrint("Final url is: \(resource.url)")
 
-        NetworkServices.fetchJson(resource: resource) { result in
+        NetworkServices.shared.fetchJson(resource: resource) { result in
             self.presenter?.hideLoader(type: .general)
             switch result {
             case .success(let characterData):
@@ -116,7 +110,7 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
         let resource = Resource<EpisodesData>(url: finalUrl)
         debugPrint("Final url is: \(resource.url)")
 
-        NetworkServices.fetchJson(resource: resource) { result in
+        NetworkServices.shared.fetchJson(resource: resource) { result in
             self.presenter?.hideLoader(type: .general)
             switch result {
             case .success(let episodesData):
@@ -139,7 +133,7 @@ class ListInteractor: ListBusinessLogic, ListDataStore {
         let resource = Resource<LocationData>(url: finalUrl)
         debugPrint("Final url is: \(resource.url)")
 
-        NetworkServices.fetchJson(resource: resource) { result in
+        NetworkServices.shared.fetchJson(resource: resource) { result in
             self.presenter?.hideLoader(type: .general)
             switch result {
             case .success(let locationData):

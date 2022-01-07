@@ -13,7 +13,8 @@ var BaseURL = Environment.baseURL
 let DEVICE_TYPE = "ios"
 let LANGUAGE_CODE = Locale.current.languageCode?.lowercased() ?? "en"
 let SOMETHING_WENT_WRONG = "something went wrong"
-
+let kDateTime = "DateTime"
 
 // MARK: - Notification
 let NOTIF_NO_INTERNET = "NoInternet"
+

@@ -5,7 +5,6 @@
 //  Created by Nevilkumar Lad on 06/01/22.
 //
 
-import Alamofire
 
 struct ApiResponse: Decodable {
     var success: Bool?

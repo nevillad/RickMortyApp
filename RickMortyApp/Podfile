@@ -3,7 +3,6 @@
 
 # Available pods
 def available_pods
-    pod 'Alamofire'
     pod 'MBProgressHUD'
     pod 'ReachabilitySwift'
     pod 'FLEX', :configurations => ['Debug']
