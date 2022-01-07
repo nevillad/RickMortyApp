@@ -70,10 +70,10 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gW-AA-NhJ" customClass="ColoredBackgroundView" customModule="RickMortyApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="85" width="474" height="1"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="20" y="85.5" width="454" height="0.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="1" id="Xuj-cs-Rjp"/>
+                            <constraint firstAttribute="height" constant="0.5" id="Xuj-cs-Rjp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="ViewColor" value="lightBackground"/>
@@ -84,7 +84,7 @@
                     <constraint firstItem="g1D-1p-yR9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dv1-7I-a1P" secondAttribute="top" constant="10" id="Gt7-Ez-dTa"/>
                     <constraint firstItem="g1D-1p-yR9" firstAttribute="leading" secondItem="dv1-7I-a1P" secondAttribute="leading" constant="20" id="LfB-sq-eOI"/>
                     <constraint firstItem="8gW-AA-NhJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="g1D-1p-yR9" secondAttribute="bottom" constant="10" id="lz3-DE-keN"/>
-                    <constraint firstItem="8gW-AA-NhJ" firstAttribute="leading" secondItem="dv1-7I-a1P" secondAttribute="leading" id="pMw-Fl-j3r"/>
+                    <constraint firstItem="8gW-AA-NhJ" firstAttribute="leading" secondItem="dv1-7I-a1P" secondAttribute="leading" constant="20" id="pMw-Fl-j3r"/>
                     <constraint firstAttribute="trailing" secondItem="8gW-AA-NhJ" secondAttribute="trailing" id="tfb-yB-qQA"/>
                     <constraint firstAttribute="bottom" secondItem="8gW-AA-NhJ" secondAttribute="bottom" id="ugf-ik-vmd"/>
                     <constraint firstAttribute="trailing" secondItem="g1D-1p-yR9" secondAttribute="trailing" constant="20" id="vKq-Xq-ipg"/>
