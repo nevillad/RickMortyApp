@@ -3,7 +3,8 @@
 This is a sample app developed using UIKit framework and having support of minimum iOS version 13. While developing I have kept clean swift architechture in mind and have listed description below. 
 
 - [x] [Clean Swift](https://clean-swift.com/)
-      Clean Swift architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols. In Clean Swift, your project structure is built around scenes and we have a set of components in each scene that will "work" for our controller. Following are the components<br /> 
+     - Clean Swift architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols.
+     - In Clean Swift, your project structure is built around scenes and we have a set of components in each scene that will "work" for our controller. Following are the components<br /> 
       * **Models**<br /> 
       * **Router**<br /> 
       * **Worker**<br /> 
