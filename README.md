@@ -1,9 +1,17 @@
 # Rick and Morty iOS App
 
-This is a sample iOS 13+ UIKit project using:
+This is a sample app developed using UIKit framework and having support of minimum iOS version 13. While developing I have kept clean swift architechture in mind and have listed description below.
 
 - [x] [Clean Swift](https://clean-swift.com/)
-      - Clean architechture satishfy SOLID principles, It decouple class responsibility wiht well established boundries(More easy to test and suitable TDD), Each class has it's own responsibilities so we can achive sepration of concerns. 
+      In Clean Swift, your project structure is built around scenes. Here is an example how does one scene looks like. In other words, we will have a set of components for each scene that will "work" for our controller. These are the components<br /> 
+      * **Models**<br /> 
+      * **Router**<br /> 
+      * **Worker**<br /> 
+      * **Interactor**<br /> 
+      * **Presenter**<br /> <br /> 
+      Clean architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), Each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols.
+      <br />
+
 - [x] Cached option with URLCache
      - To avoid unwanted API requests for single day.
            // Load offline data if available
