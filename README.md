@@ -9,6 +9,7 @@ This is a sample iOS 13+ UIKit project using:
 
 ## Project Structure
 <img width="182" alt="Screenshot 2022-01-07 at 2 36 56 PM" src="https://user-images.githubusercontent.com/3881137/148520027-fc239442-52a9-4c2a-ba14-977a24237d90.png">
+
 - **Configuration** Folder contains xcconfing files which has confinguration based on App and Environment 
 - **Models** Folder contains DataModel Classes
 - **Services** Folder Network Service related classes
@@ -16,4 +17,5 @@ This is a sample iOS 13+ UIKit project using:
 - **Scenes** Folder contains all the screens files e.g ViewController, Intractor, Presenter, Router and Model claess for each screen
 
 
+App UI Screens
 ![Simulator Screen Recording - iPhone 12 - 2022-01-07 at 14 51 52](https://user-images.githubusercontent.com/3881137/148522588-013c0c3e-7614-4d39-a3df-28adf5968a37.gif)
