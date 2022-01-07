@@ -1,9 +1,9 @@
 # Rick and Morty iOS App
 
-This is a sample app developed using UIKit framework and having support of minimum iOS version 13. While developing I have kept clean swift architechture in mind and have listed description below. 
+This is a sample app developed using UIKit framework and having support of minimum iOS version 13. It also using cocoapods depedencies to integrate thirdparty libraries/frameworks. While developing I have used Clean Swift Architechture and URL Caching that is listed below. 
 
 - [x] [Clean Swift](https://clean-swift.com/)
-     - Clean Swift architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols.
+     - Clean Swift Architechture satisfies SOLID principles and it decouple class responsibility with well established boundries(More easy to test and suitable for TDD), each class has it's own responsibilities and it can be achieved through sepration of concerns using protocols.
      - In Clean Swift, your project structure is built around scenes and we have a set of components in each scene that will "work" for our controller. Following are the components<br /> 
       * **Models**<br /> 
       * **Router**<br /> 
@@ -12,13 +12,12 @@ This is a sample app developed using UIKit framework and having support of minim
       * **Presenter**<br /> <br /> 
 
 - [x] Cached option with **URLCache**
-     - To reduce the redundant API calls I've used URLCache to store respone for a particular day.
-           //Below are the steps to achive that
-          - Step 1: Retrive url reponse cached for url request
-          - Step 2: Check if url reponse cached is of same day
+     - To reduce the redundant API calls I've used URLCache to store respone for a particular day. Below are the steps to achive that,
+          - Step 1: Retrive URL Reponse cached for url request
+          - Step 2: Check if URL Reponse cached is of same day
                    - If data is of same day return clouser with cached data
-          - Step 3: if response data found then cache those data
-          - Step 4: Return local cache data if error occuered OR data not available
+          - Step 3: If response data found then cache those data
+          - Step 4: Return local cache data if error occuered OR Data not available
 
 ## Project Structure
 <img width="182" alt="Screenshot 2022-01-07 at 2 36 56 PM" src="https://user-images.githubusercontent.com/3881137/148520027-fc239442-52a9-4c2a-ba14-977a24237d90.png">
